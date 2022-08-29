@@ -1,3 +1,8 @@
+créditos:
+Auth: https://www.youtube.com/watch?v=OE4IupjQjzE
+https://app.planetscale.com/tiago-abreu/next-auth?branch=initial-setup
+https://next-auth.js.org/adapters/prisma
+
 yarn create next-app next-auth
 
 inserindo typescript
@@ -22,3 +27,31 @@ yarn add tailwindcss postcss autoprefixer -D
 
 trabalhando com next-auth + prima (prisma adapter)
 yarn add @next-auth/prisma-adapter
+
+planetscale CLI
+instalar o gerenciador de pacotes scoop
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+scoop bucket add extras
+scoop bucket add pscale https://github.com/planetscale/scoop-bucket.git
+ scoop install pscale mysql
+
+pscale auth login
+pscale db create next-auth
+https://app.planetscale.com/tiago-abreu/next-auth
+
+pscale branch create next-auth initial-setup
+https://app.planetscale.com/tiago-abreu/next-auth/initial-setup
+
+para criar o ambiente local
+pscale branch create next-auth shadow
+
+promover branch de produção
+pscale branch promote next-auth main
+
+ npx prisma init
+
+pscale connect next-auth initial-setup --port 3309
+pscale connect next-auth main --port 3310
+npx prisma db push
+npx tailwindcss init -p 
