@@ -19,3 +19,6 @@ yarn add next-auth
 
 instalando o tailwindcss
 yarn add tailwindcss postcss autoprefixer -D
+
+trabalhando com next-auth + prima (prisma adapter)
+yarn add @next-auth/prisma-adapter
