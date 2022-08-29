@@ -7,6 +7,6 @@ renomear arquivos .js para .tsx da pasta pages
 
 yarn dev
 
-
-
+instalando sass
+yarn add sass
 
