@@ -1,2 +1,12 @@
 yarn create next-app next-auth
 
+inserindo typescript
+yarn add typescript @types/react @types/node -D
+criar pasta src e mover a pasta pages para dentro dela
+renomear arquivos .js para .tsx da pasta pages
+
+yarn dev
+
+
+
+
