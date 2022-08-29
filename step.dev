@@ -10,3 +10,8 @@ yarn dev
 instalando sass
 yarn add sass
 
+intalando o prisma
+yarn add primas -D
+yarn add @prisma/client
+
+
