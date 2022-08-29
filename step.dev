@@ -14,4 +14,8 @@ intalando o prisma
 yarn add primas -D
 yarn add @prisma/client
 
+instalando Next-auth
+yarn add next-auth
 
+instalando o tailwindcss
+yarn add tailwindcss postcss autoprefixer -D
