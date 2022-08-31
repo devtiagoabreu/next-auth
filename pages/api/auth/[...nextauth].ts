@@ -24,35 +24,13 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      profile(profile) {
-        return {
-            id: profile.id.toString(),
-            name: profile.name || profile.login,
-            username: profile.login,
-            email: profile.email,
-            image: profile.avatar_url,
-        };
-      },
-    }),
-    CredentialsProvider({
-      id: 'credentials',
-      credentials: {
-        email: { label: 'E-mail', type: 'text' },
-        password: { label: 'Semha', type: 'password' }
-      },
-      authorize: async (credentials, req) => {
-        const user = {
-          id:123,
-          name: 'Tiago',
-          email: 'tiago@atriostech.com.br',
-          role: 'USER'
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
         }
-        if(user) {
-          return user;
-        }
-        return null;
-      }
-
+      },
     }),
     // ...add more providers here
   ],
