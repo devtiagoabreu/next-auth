@@ -16,7 +16,7 @@ instalando sass
 yarn add sass
 
 intalando o prisma
-yarn add primas -D
+yarn add prima -D
 yarn add @prisma/client
 
 instalando Next-auth
