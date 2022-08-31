@@ -1,3 +1,23 @@
+import { getSession, signIn } from "next-auth/react";
+
+export async function getServerSideProps(context) {
+  const session = await getSession(context);
+
+  if (session) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: { session },
+  };
+}
+
+
 function Login() {
     return (
 <div className="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
@@ -20,7 +40,7 @@ function Login() {
           <div className="grid grid-cols-3 gap-1">
               <button type="button" className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center inline-block">MailUp</button>
               <button type="button" className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center inline-block">Google</button>
-              <button type="button" className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center inline-block">Github</button>
+              <button type="button" onClick={() => signIn("github")} className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center inline-block">Github</button>
           </div>
       </div>
         <div className="py-5">

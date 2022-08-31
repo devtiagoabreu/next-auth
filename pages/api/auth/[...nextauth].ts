@@ -1,11 +1,11 @@
-import NextAuth from "next-auth"
-import GithubProvider from "next-auth/providers/github"
-import GoogleProvider from "next-auth/providers/google"
-import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import prisma from "../../../../lib/prisma"
+import NextAuth, { NextAuthOptions } from "next-auth";
+import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
+import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import prisma from "../../../lib/prisma";
+import CredentialsProvider from 'next-auth/providers/credentials';
 
-
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     GithubProvider({
@@ -25,6 +25,26 @@ export const authOptions = {
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
+    CredentialsProvider({
+      id: 'credentials',
+      credentials: {
+        email: { label: 'E-mail', type: 'text' },
+        password: { label: 'Semha', type: 'password' }
+      },
+      authorize: async (credentials, req) => {
+        const user = {
+          id:123,
+          name: 'Tiago',
+          email: 'tiago@atriostech.com.br',
+          role: 'USER'
+        }
+        if(user) {
+          return user;
+        }
+        return null;
+      }
+
+    }),
     // ...add more providers here
   ],
   secret: process.env.NEXTAUTH_SECRET,
@@ -40,6 +60,6 @@ export const authOptions = {
 
     }),
   },
-}
+};
 
 export default NextAuth(authOptions);
