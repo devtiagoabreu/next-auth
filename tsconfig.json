@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/middleware.tsddd"  ],
   "exclude": [
     "node_modules"
   ]

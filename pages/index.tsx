@@ -20,8 +20,6 @@ export async function getServerSideProps(context) {
   };
 } 
 
-
-
 const Home: NextPage = () => {
   const { data: session } = useSession();
   
