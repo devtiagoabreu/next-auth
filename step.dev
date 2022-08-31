@@ -55,3 +55,5 @@ pscale connect next-auth initial-setup --port 3309
 pscale connect next-auth main --port 3310
 npx prisma db push
 npx tailwindcss init -p 
+
+yarn add @prisma/client
