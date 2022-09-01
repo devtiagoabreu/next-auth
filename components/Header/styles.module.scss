@@ -1,0 +1,47 @@
+.headerContainer {
+    height: 3rem;
+    background-color: #141a29;
+}
+
+.headerContent {
+    max-width: 1120px;
+    height: 3rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        display: inline-block;
+        position: relative;
+        padding: 0 0.5rem;
+        height: 5rem;
+        line-height: 5rem;
+        color: #FFF;
+        cursor: pointer;
+    }
+
+    img {
+        cursor: pointer;
+    }
+
+    nav {
+        margin-left: 5rem;
+        height: 5rem;
+
+        a {
+            display: inline-block;
+            position: relative;
+            padding: 0 0.5rem;
+            height: 5rem;
+            line-height: 5rem;
+            color: #FFF;
+            & + a {
+                margin-left: 2rem;
+            }
+        }
+    }
+
+    button {
+        margin-left: auto;
+    }
+}

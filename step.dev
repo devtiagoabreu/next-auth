@@ -21,6 +21,7 @@ yarn add @prisma/client
 
 instalando Next-auth
 yarn add next-auth
+yarn add @types/next-auth
 
 instalando o tailwindcss
 yarn add tailwindcss postcss autoprefixer -D
@@ -49,11 +50,17 @@ pscale branch create next-auth shadow
 promover branch de produção
 pscale branch promote next-auth main
 
- npx prisma init
+npx prisma init
+
+yarn prisma init
 
 pscale connect next-auth initial-setup --port 3309
 pscale connect next-auth main --port 3310
+yarn prisma db push
 npx prisma db push
 npx tailwindcss init -p 
 
 yarn add @prisma/client
+
+ícones do react
+ yarn add react-icons

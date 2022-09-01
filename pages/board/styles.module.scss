@@ -1,0 +1,166 @@
+.container {
+    max-width: 1120px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #17181f;
+    border-radius: 6px;
+
+    form {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            background-color: #20212c;
+            border: 1px solid #424242;
+            padding: 3px 10px;
+            color: #FFF;
+            font-size: 0.7rem; 
+        }
+
+       .inputNfe {
+            width: 13%;
+            height: 40px;
+       }
+
+       .inputCliente {
+            width: 25%;
+            height: 40px;
+            margin-left: 10px;        
+       }
+
+       .inputLote {
+            width: 13%;
+            height: 40px;
+            margin-left: 10px;        
+       }
+
+       .inputProdutoFornecedor {
+            width: 15%;
+            height: 40px;
+            margin-left: 10px;        
+       }
+
+       .inputProduto {
+            width: 15%;
+            height: 40px;
+            margin-left: 10px;        
+       }
+
+       .inputQtde {
+            width: 10%;
+            height: 40px;
+            margin-left: 10px;        
+       }
+
+       .inputPesoLiquido {
+            width: 10%;
+            height: 40px;
+            margin-left: 10px;        
+       }
+
+       .inputPesoBruto {
+            width: 10%;
+            height: 40px;
+            margin-left: 10px;        
+       }
+
+       button {
+            margin-left: 10px;
+            width: 5%;
+            height: 40px;
+            border: 0;
+            background-color: #FFB800;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       }
+    }
+
+    h1 {
+        color: #FFF;
+        margin-top: 1.8rem;
+    }
+}
+
+.taskList{
+    background-color: #20212c;
+    margin: 1rem 0;
+    padding: 0.7rem;
+    border-radius: 7px;
+
+    p {
+        cursor: pointer;
+        color: #F2f6fc;
+        font-size: 0.8rem;
+        line-height: 150%;
+    }
+
+    .actions {
+        width: 100%;
+        display: Flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    div {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        time {
+            color: #FFB800;
+            margin-left: 5px;
+            margin-right: 1rem;
+        }
+    }
+
+    button {
+        background: transparent;
+        border: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & + button {
+            margin-left: 10px;
+        }
+
+        span {
+            margin-left: 5px;
+            color:#FFF;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        span:hover {
+            filter: brightness(0.7)
+        }
+    }
+}
+
+.vipContainer {
+    max-width: 1120px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #17181f;
+    border-radius: 6px;
+
+    h3 {
+        color: #FFB800;
+        font-size: 0.8rem;
+    }
+
+    div {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+
+        time {
+            color: #FFF;
+            font-size: 1rem;
+            padding: 10px;
+        }
+    }
+}
