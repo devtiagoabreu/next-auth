@@ -64,3 +64,9 @@ yarn add @prisma/client
 
 ícones do react
  yarn add react-icons
+
+ instalando o firebase
+ yarn add firebase
+ yarn add @types/firebase
+
+ yarn add date-fns
